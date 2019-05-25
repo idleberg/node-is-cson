@@ -21,6 +21,7 @@ Determines whether a string is valid CSON
 const { isCSON } = require('is-cson');
 
 isCSON('"firstName": "John"\n"lastName": "Doe"');
+```
 
 ## License
 
