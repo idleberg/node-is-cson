@@ -20,7 +20,12 @@ Determines whether a string is valid CSON
 ```js
 const { isCSON } = require('is-cson');
 
-isCSON('"firstName": "John"\n"lastName": "Doe"');
+const inputString = `
+  "firstName": "John"
+  lastName": "Doe"
+`;
+
+isCSON(inputString);
 ```
 
 ## License
