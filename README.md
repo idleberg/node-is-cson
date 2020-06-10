@@ -3,7 +3,7 @@
 [![npm](https://flat.badgen.net/npm/license/is-cson)](https://www.npmjs.org/package/is-cson)
 [![npm](https://flat.badgen.net/npm/v/is-cson)](https://www.npmjs.org/package/is-cson)
 [![CircleCI](https://flat.badgen.net/circleci/github/idleberg/node-is-cson)](https://circleci.com/gh/idleberg/node-is-cson)
-[![David](https://flat.badgen.net/david/dev/idleberg/node-is-cson)](https://david-dm.org/idleberg/node-is-cson?type=dev)
+[![David](https://flat.badgen.net/david/dep/idleberg/node-is-cson)](https://david-dm.org/idleberg/node-is-cson)
 
 Determines whether a string is valid CSON
 
