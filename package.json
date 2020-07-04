@@ -1,6 +1,6 @@
 {
   "name": "is-cson",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Determines whether a string is valid CSON",
   "scripts": {
     "build": "tsc --pretty --project ./",
