@@ -5,13 +5,10 @@ import { isCSON } from '../dist';
 import test from 'ava';
 import fs from 'fs';
 import { join } from 'path';
-import { promisify } from 'util';
-
-const readFile = promisify(fs.readFile);
 
 // Tests
 test('Valid', async t => {
-  const csonFile = (await readFile(join(__dirname, 'fixtures/valid.cson'))).toString();
+  const csonFile = (await fs.promises.readFile(join(__dirname, 'fixtures/valid.cson'))).toString();
 
   const actual = isCSON(csonFile);
   const expected = true;
@@ -20,7 +17,7 @@ test('Valid', async t => {
 });
 
 test('Invalid', async t => {
-  const csonFile = (await readFile(join(__dirname, 'fixtures/invalid.cson'))).toString();
+  const csonFile = (await fs.promises.readFile(join(__dirname, 'fixtures/invalid.cson'))).toString();
 
   const actual = isCSON(csonFile);
   const expected = true;
@@ -36,7 +33,7 @@ test('Null', async t => {
 });
 
 test('Not JSON', async t => {
-  const csonFile = (await readFile(join(__dirname, 'fixtures/valid.json'))).toString();
+  const csonFile = (await fs.promises.readFile(join(__dirname, 'fixtures/valid.json'))).toString();
 
   const actual = isCSON(csonFile);
   const expected = true;
