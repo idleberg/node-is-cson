@@ -4,8 +4,9 @@
   "description": "Determines whether a string is valid CSON",
   "scripts": {
     "build": "tsc --pretty --project ./",
-    "dev": "tsc --watch --pretty --project ./",
+    "dev": "npm run start",
     "lint": "tslint --project .",
+    "start": "tsc --watch --pretty --project ./",
     "test": "ava --verbose"
   },
   "main": "dist/index.js",

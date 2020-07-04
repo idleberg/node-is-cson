@@ -27,6 +27,27 @@ const inputString = `
 `;
 
 isCSON(inputString);
+// => true
+```
+
+### Options
+
+#### `strict`
+
+Default: `true`  
+
+Remember that all JSON is valid CSON. By default, this library runs *strict* tests for CSON only. Setting this option to `false` will return true for valid JSON.
+
+**Example:**
+
+```js
+const inputString = `{
+  "firstName": "John",
+  "lastName": "Doe"
+}`;
+
+isCSON(inputString, { strict: false });
+// => true
 ```
 
 ## License

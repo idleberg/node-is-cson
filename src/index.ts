@@ -5,8 +5,13 @@ import { parse } from 'cson-parser';
  * @param   - string CSON
  * @returns - boolean
  */
-const isCSON = (input: string): boolean => {
+const isCSON = (input: string, userOptions: IsCsonOptions = {}): boolean => {
   if (!isString(input)) return false;
+
+  const options = {
+    strict: true,
+    ...userOptions
+  };
 
   try {
     // Make sure the string isn't JSON
@@ -21,7 +26,7 @@ const isCSON = (input: string): boolean => {
     return true;
   }
 
-  return false;
+  return options.strict ? false : true;
 };
 
 function isString(input) {

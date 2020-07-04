@@ -3,5 +3,5 @@
  * @param   - string CSON
  * @returns - boolean
  */
-declare const isCSON: (input: string) => boolean;
+declare const isCSON: (input: string, userOptions?: IsCsonOptions) => boolean;
 export { isCSON };
