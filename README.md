@@ -36,7 +36,7 @@ isCSON(inputString);
 
 Default: `true`  
 
-Remember that all JSON is valid CSON. By default, this library runs *strict* tests for CSON only. Setting this option to `false` will return true for valid JSON.
+Since CSON is a superset of *well-formatted* JSON, this library runs *strict* tests for CSON only. Disabling the strict option will override this behaviour.
 
 **Example:**
 
