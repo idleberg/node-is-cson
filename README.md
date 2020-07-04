@@ -38,7 +38,8 @@ Default: `true`
 
 Since CSON is a superset of *well-formatted* JSON, this library runs *strict* tests for CSON only. Disabling the strict option will override this behaviour.
 
-**Example:**
+<details>
+<summary><strong>Example</strong></summary>
 
 ```js
 const inputString = `{
@@ -49,6 +50,7 @@ const inputString = `{
 isCSON(inputString, { strict: false });
 // => true
 ```
+</details>
 
 ## License
 
