@@ -52,6 +52,8 @@ isCSON(inputString, { strict: false });
 ```
 </details>
 
+**Note:** With strict mode disabled, several features of invalid JSON (e.g. trailing commas or single quotes) will be ignored
+
 ## License
 
 This work is licensed under [The MIT License](https://opensource.org/licenses/MIT)
