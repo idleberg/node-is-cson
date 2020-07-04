@@ -13,7 +13,7 @@ Determines whether a string is valid CSON
 
 ## Usage
 
-`isCSON(string)`
+`isCSON(string, options?)`
 
 **Example:**
 
