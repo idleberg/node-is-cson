@@ -9,6 +9,11 @@ shrinkwrap.yaml
 yarn-error.log
 yarn.lock
 
+# development
+*.map
+*.tsbuildinfo
+tslint-to-eslint-config.log
+
 # project specific
 test.js
 test.ts

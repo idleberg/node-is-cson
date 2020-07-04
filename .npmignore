@@ -7,9 +7,15 @@ test/
 # Files
 .gitignore
 .travis.yml
+*.map
+*.tsbuildinfo
 gulpfile.js
+npm-debug.log*
 tsconfig.json
+tslint-to-eslint-config.log
 tslint.json
+yarn-error.log
+yarn.lock
 
 # project specific
 AppxManifest.*
