@@ -22,8 +22,8 @@ const { isCSON } = require('is-cson');
 
 // Generate CSON string
 const inputString = `
-  firstName: "John"
-  lastName: "Doe"
+  firstName: 'John'
+  lastName: 'Doe'
 `;
 
 isCSON(inputString);
