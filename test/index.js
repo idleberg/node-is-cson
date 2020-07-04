@@ -59,7 +59,6 @@ test('Valid JSON', async t => {
   t.is(expected, actual);
 });
 
-
 test('Valid JSON (strict)', async t => {
   const csonFile = (await fs.promises.readFile(join(__dirname, 'fixtures/valid.json'))).toString();
 
