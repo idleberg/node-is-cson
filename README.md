@@ -57,7 +57,3 @@ isCSON(inputString, { strict: false });
 ## License
 
 This work is licensed under [The MIT License](https://opensource.org/licenses/MIT)
-
-## Donate
-
-You are welcome to support this project using [Flattr](https://flattr.com/submit/auto?user_id=idleberg&url=https://github.com/idleberg/node-is-cson) or Bitcoin `17CXJuPsmhuTzFV2k4RKYwpEHVjskJktRd`
