@@ -21,12 +21,12 @@ Determines whether a string is valid CSON
 const { isCSON } = require('is-cson');
 
 // Generate CSON string
-const inputString = `
+const csonString = `
   firstName: 'John'
   lastName: 'Doe'
 `;
 
-isCSON(inputString);
+isCSON(csonString);
 // => true
 ```
 
@@ -42,12 +42,12 @@ Since CSON is a superset of *well-formatted* JSON, this library runs *strict* te
 <summary><strong>Example</strong></summary>
 
 ```js
-const inputString = `{
+const jsonString = `{
   "firstName": "John",
   "lastName": "Doe"
 }`;
 
-isCSON(inputString, { strict: false });
+isCSON(jsonString, { strict: false });
 // => true
 ```
 </details>
