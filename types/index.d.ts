@@ -1,3 +1,3 @@
 interface IsCsonOptions {
-  strict?: Boolean;
+  strict?: boolean;
 }
