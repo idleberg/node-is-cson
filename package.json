@@ -1,6 +1,6 @@
 {
   "name": "is-cson",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Determines whether a string is valid CSON",
   "scripts": {
     "build": "rollup --config",
