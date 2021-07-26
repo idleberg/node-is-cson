@@ -1,35 +1,44 @@
-import { nodeResolve } from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
-import filesize from 'rollup-plugin-filesize';
 import json from '@rollup/plugin-json';
-import nodePolyfills from 'rollup-plugin-node-polyfills';
 import typescript from '@rollup/plugin-typescript';
 
-const defaults = {
-  output: {
-    dir: 'dist',
-    format: 'cjs'
-  },
-  plugins: [
-    commonjs(),
-    filesize(),
-    json(),
-    nodePolyfills(),
-    nodeResolve(),
-    typescript({
-      "lib": [
-          "dom",
-          "esnext"
-      ],
-      "module": "commonjs",
-      "moduleResolution": "node"
-    })
-  ]
+const plugins = [
+  commonjs(),
+  json()
+];
+
+const compilerOptions = {
+  allowSyntheticDefaultImports: true,
+  moduleResolution: "node",
+  strictNullChecks: true,
+  typeRoots: ['./types', './node_modules/@types']
 };
 
 export default [
   {
-    ...defaults,
-    input: 'src/index.ts',
+    input: 'src/is-cson.ts',
+    output: {
+      file: 'dist/is-cson.cjs',
+      format: 'cjs'
+    },
+    plugins: [
+      ...plugins,
+      typescript(compilerOptions)
+    ]
+  },
+  {
+    input: 'src/is-cson.ts',
+    output: {
+      file: 'dist/is-cson.mjs',
+      format: 'esm'
+    },
+    plugins: [
+      ...plugins,
+      typescript({
+        ...compilerOptions,
+        module: "ES2020",
+        moduleResolution: "node"
+      })
+    ]
   }
 ];

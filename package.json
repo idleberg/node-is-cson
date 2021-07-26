@@ -8,13 +8,18 @@
     "fix": "eslint --fix ./src",
     "lint": "eslint ./src",
     "start": "rollup --watch --config",
-    "test": "ava --verbose"
+    "test": "ava --verbose",
+    "prepare": "husky install"
   },
-  "main": "dist/index.js",
+  "type": "module",
+  "exports": {
+    "import": "./dist/is-cson.mjs",
+    "require": "./dist/is-cson.cjs"
+  },
+  "typings": "types/",
   "files": [
     "dist/"
   ],
-  "typings": "./types",
   "repository": {
     "type": "git",
     "url": "https://github.com/idleberg/node-is-cson.git"
@@ -24,11 +29,6 @@
     "coffeescript"
   ],
   "license": "MIT",
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run lint"
-    }
-  },
   "dependencies": {
     "cson-parser": "^4.0.5"
   },
@@ -42,16 +42,10 @@
     "@typescript-eslint/parser": "^4.0.1",
     "ava": "^3.12.1",
     "eslint": "^7.8.1",
-    "esm": "^3.2.25",
-    "husky": "4.2.5",
+    "husky": "^7.0.0",
     "rollup": "^2.26.10",
     "rollup-plugin-filesize": "^9.0.2",
     "rollup-plugin-node-polyfills": "^0.2.1",
     "typescript": "^4.0.2"
-  },
-  "ava": {
-    "require": [
-      "esm"
-    ]
   }
 }
