@@ -52,6 +52,7 @@ isCSON(jsonString, { allowJSON: true });
 ```
 </details>
 
+**Note:** With `options.allowJSON` enabled, invalid JSON such as trailing commas or single quotes will validate successfully!
 ## License
 
 This work is licensed under [The MIT License](https://opensource.org/licenses/MIT)
