@@ -9,7 +9,7 @@ const plugins = [
 
 const compilerOptions = {
   allowSyntheticDefaultImports: true,
-  moduleResolution: "node",
+  moduleResolution: 'node',
   strictNullChecks: true,
   typeRoots: ['./types', './node_modules/@types']
 };
@@ -36,8 +36,8 @@ export default [
       ...plugins,
       typescript({
         ...compilerOptions,
-        module: "ES2020",
-        moduleResolution: "node"
+        module: 'ES2020',
+        moduleResolution: 'node'
       })
     ]
   }
