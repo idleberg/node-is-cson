@@ -34,7 +34,7 @@ test('Null', async t => {
   t.not(expected, actual);
 });
 
-test('Invalid JSON (allowed)', async t => {
+test('Invalid JSON (allowJSON)', async t => {
   const csonFile = (await fs.readFile(path.join(__dirname, 'test/fixtures/valid.json'))).toString();
   
   const expected = true;
@@ -54,7 +54,7 @@ test('Invalid JSON', async t => {
   t.not(expected, actual);
 });
 
-test('Valid JSON (allowed)', async t => {
+test('Valid JSON (allowJSON)', async t => {
   const csonFile = (await fs.readFile(path.join(__dirname, 'test/fixtures/valid.json'))).toString();
 
   const expected = true;
