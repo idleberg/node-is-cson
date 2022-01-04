@@ -36,7 +36,7 @@ isCSON(csonString);
 
 Default: `false`  
 
-Since CSON is a superset of *well-formatted* JSON, this library runs *strict* tests for CSON only. Enabling this option will also validate JSON.
+Since CSON is a superset of *well-formatted* JSON, this library runs *strict* tests for CSON only. Enabling this option will also validate JSON, with CSON-specific features (such as trailing commas or single quotes) taking precedence.
 
 <details>
 <summary><strong>Example</strong></summary>
@@ -52,7 +52,6 @@ isCSON(jsonString, { allowJSON: true });
 ```
 </details>
 
-**Note:** With `options.allowJSON` enabled, invalid JSON such as trailing commas or single quotes will validate successfully!
 ## License
 
 This work is licensed under [The MIT License](https://opensource.org/licenses/MIT)
