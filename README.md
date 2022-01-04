@@ -47,7 +47,7 @@ const jsonString = `{
   "lastName": "Doe"
 }`;
 
-isCSON(jsonString, { allowJSON: false });
+isCSON(jsonString, { allowJSON: true });
 // => true
 ```
 </details>
