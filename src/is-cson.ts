@@ -1,4 +1,4 @@
-import { parse } from 'cson-parser';
+import { parse as parseCSON } from 'cson-parser';
 
 /**
  * Determines whether a string is valid CSON
@@ -9,7 +9,7 @@ const isCSON = (input: string, userOptions: IsCsonOptions = {}): boolean => {
   if (!isString(input)) return false;
 
   const options = {
-    strict: true,
+    allowJSON: false,
     ...userOptions
   };
 
@@ -18,7 +18,7 @@ const isCSON = (input: string, userOptions: IsCsonOptions = {}): boolean => {
     JSON.parse(input);
   } catch (error) {
     try {
-      parse(input);
+      parseCSON(input);
     } catch (error) {
       return false;
     }
@@ -26,7 +26,7 @@ const isCSON = (input: string, userOptions: IsCsonOptions = {}): boolean => {
     return true;
   }
 
-  return options.strict ? false : true;
+  return options.allowJSON ? true : false;
 };
 
 function isString(input) {

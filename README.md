@@ -32,11 +32,11 @@ isCSON(csonString);
 
 ### Options
 
-#### `strict`
+#### `allowJSON`
 
 Default: `true`  
 
-Since CSON is a superset of *well-formatted* JSON, this library runs *strict* tests for CSON only. Disabling the strict option will override this behaviour.
+Since CSON is a superset of *well-formatted* JSON, this library runs *strict* tests for CSON only. Disabling this option will also validate JSON. However, this will also validate JSON with trailing commas or single quotes and is not recommended.
 
 <details>
 <summary><strong>Example</strong></summary>
@@ -47,12 +47,10 @@ const jsonString = `{
   "lastName": "Doe"
 }`;
 
-isCSON(jsonString, { strict: false });
+isCSON(jsonString, { allowJSON: false });
 // => true
 ```
 </details>
-
-**Note:** With strict mode disabled, several features of invalid JSON (e.g. trailing commas or single quotes) will be ignored
 
 ## License
 

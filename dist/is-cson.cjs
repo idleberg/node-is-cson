@@ -39,7 +39,7 @@ var isCSON = function (input, userOptions) {
     if (userOptions === void 0) { userOptions = {}; }
     if (!isString(input))
         return false;
-    var options = __assign({ strict: true }, userOptions);
+    var options = __assign({ allowJSON: false }, userOptions);
     try {
         // Make sure the string isn't JSON
         JSON.parse(input);
@@ -53,7 +53,7 @@ var isCSON = function (input, userOptions) {
         }
         return true;
     }
-    return options.strict ? false : true;
+    return options.allowJSON ? true : false;
 };
 function isString(input) {
     return Object.prototype.toString.call(input) === '[object String]';
