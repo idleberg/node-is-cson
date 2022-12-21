@@ -34,20 +34,20 @@
     "update": "^0.7.4"
   },
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^21.0.1",
-    "@rollup/plugin-json": "^4.1.0",
-    "@rollup/plugin-node-resolve": "^13.0.4",
-    "@rollup/plugin-typescript": "^8.2.3",
-    "@types/node": "^16.4.3",
-    "@typescript-eslint/eslint-plugin": "^5.9.0",
-    "@typescript-eslint/parser": "^5.9.0",
-    "eslint": "^8.6.0",
-    "husky": "^7.0.0",
-    "rollup": "^2.26.10",
-    "rollup-plugin-filesize": "^9.0.2",
+    "@rollup/plugin-commonjs": "^24.0.0",
+    "@rollup/plugin-json": "^6.0.0",
+    "@rollup/plugin-node-resolve": "^15.0.1",
+    "@rollup/plugin-typescript": "^10.0.1",
+    "@types/node": "^18.11.17",
+    "@typescript-eslint/eslint-plugin": "^5.47.0",
+    "@typescript-eslint/parser": "^5.47.0",
+    "eslint": "^8.30.0",
+    "husky": "^8.0.2",
+    "rollup": "^3.7.5",
+    "rollup-plugin-filesize": "^9.1.2",
     "rollup-plugin-node-polyfills": "^0.2.1",
-    "tslib": "^2.3.0",
-    "typescript": "^4.5.4",
+    "tslib": "^2.4.1",
+    "typescript": "^4.9.4",
     "uvu": "^0.5.6"
   }
 }
