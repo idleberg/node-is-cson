@@ -19,7 +19,10 @@
   },
   "typings": "types/",
   "files": [
-    "dist/"
+    "dist/",
+    "types/",
+    "LICENSE",
+    "README.md"
   ],
   "repository": {
     "type": "git",
