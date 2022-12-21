@@ -2,37 +2,38 @@
 const { isCSON } = require('../dist/is-cson.cjs');
 
 // Dependencies
-const test = require('ava');
+const { test } = require('uvu');
+const assert = require('uvu/assert');
 const fs = require('fs/promises');
 const path = require('path');
 
 // Tests
-test('Valid CSON', async t => {
+test('Valid CSON', async () => {
   const csonFile = (await fs.readFile(path.join(__dirname, 'fixtures/valid.cson'))).toString();
 
   const expected = true;
   const actual = isCSON(csonFile);
 
-  t.is(expected, actual);
+  assert.is(expected, actual);
 });
 
-test('Invalid CSON', async t => {
+test('Invalid CSON', async () => {
   const csonFile = (await fs.readFile(path.join(__dirname, 'fixtures/invalid.cson'))).toString();
 
   const expected = true;
   const actual = isCSON(csonFile);
 
-  t.not(expected, actual);
+  assert.is.not(expected, actual);
 });
 
-test('Null', async t => {
+test('Null', async () => {
   const expected = true;
   const actual = isCSON(null);
 
-  t.not(expected, actual);
+  assert.is.not(expected, actual);
 });
 
-test('Invalid JSON (allowJSON)', async t => {
+test('Invalid JSON (allowJSON)', async () => {
   const csonFile = (await fs.readFile(path.join(__dirname, 'fixtures/valid.json'))).toString();
 
   const expected = true;
@@ -40,19 +41,19 @@ test('Invalid JSON (allowJSON)', async t => {
     allowJSON: true
   });
 
-  t.is(expected, actual);
+  assert.is(expected, actual);
 });
 
-test('Invalid JSON', async t => {
+test('Invalid JSON', async () => {
   const csonFile = (await fs.readFile(path.join(__dirname, 'fixtures/valid.json'))).toString();
 
   const expected = true;
   const actual = isCSON(csonFile,);
 
-  t.not(expected, actual);
+  assert.is.not(expected, actual);
 });
 
-test('Valid JSON (allowJSON)', async t => {
+test('Valid JSON (allowJSON)', async () => {
   const csonFile = (await fs.readFile(path.join(__dirname, 'fixtures/valid.json'))).toString();
 
   const expected = true;
@@ -60,14 +61,16 @@ test('Valid JSON (allowJSON)', async t => {
     allowJSON: true
   });
 
-  t.is(expected, actual);
+  assert.is(expected, actual);
 });
 
-test('Valid JSON', async t => {
+test('Valid JSON', async () => {
   const csonFile = (await fs.readFile(path.join(__dirname, 'fixtures/valid.json'))).toString();
 
   const actual = isCSON(csonFile);
   const expected = true;
 
-  t.not(expected, actual);
+  assert.is.not(expected, actual);
 });
+
+test.run();
