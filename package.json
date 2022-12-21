@@ -9,6 +9,7 @@
     "lint": "eslint ./src",
     "start": "rollup --watch --config",
     "test": "uvu tests",
+		"prepack": "npm run build",
     "prepare": "husky install"
   },
   "type": "module",
