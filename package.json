@@ -1,6 +1,6 @@
 {
   "name": "is-cson",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Determines whether a string is valid CSON",
   "scripts": {
     "build": "rollup --config",
@@ -9,7 +9,7 @@
     "lint": "eslint ./src",
     "start": "rollup --watch --config",
     "test": "uvu tests",
-		"prepack": "npm run build",
+    "prepack": "npm run build",
     "prepare": "husky install"
   },
   "type": "module",
