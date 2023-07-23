@@ -5,7 +5,7 @@ import { parse as parseCSON } from 'cson-parser';
  * @param   - string CSON
  * @returns - boolean
  */
-const isCSON = (input: string, userOptions: IsCson.Options = {}): boolean => {
+export const isCSON = (input: string, userOptions: IsCson.Options = {}): boolean => {
   if (!isString(input)) {
 		return false
 	}
@@ -34,7 +34,3 @@ const isCSON = (input: string, userOptions: IsCson.Options = {}): boolean => {
 function isString(input) {
   return Object.prototype.toString.call(input) === '[object String]';
 }
-
-export {
-  isCSON
-};
