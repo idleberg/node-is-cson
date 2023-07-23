@@ -1,5 +1,5 @@
 declare namespace IsCson {
-	function isCson(intput: string, options: Options): boolean;
+	function isCSON(intput: string, options: Options): boolean;
 
 	type Options = {
 		allowJSON?: boolean;
