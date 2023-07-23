@@ -1,10 +1,10 @@
 # is-cson
 
+> Determines whether a string is valid CSON
+
 [![npm](https://flat.badgen.net/npm/license/is-cson)](https://www.npmjs.org/package/is-cson)
 [![npm](https://flat.badgen.net/npm/v/is-cson)](https://www.npmjs.org/package/is-cson)
 [![CI](https://img.shields.io/github/actions/workflow/status/idleberg/node-is-cson/default.yml?style=flat-square)](https://github.com/idleberg/node-is-cson/actions)
-
-Determines whether a string is valid CSON
 
 ## Installation
 
