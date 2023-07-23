@@ -12,7 +12,7 @@
     "lint:ts": "eslint ./src --ignore-path .gitignore",
     "lint": "npm-run-all --parallel lint:*",
     "start": "npm run build:esm -- --watch",
-    "test": "uvu tests",
+    "test": "uvu -r tsm tests",
     "prepack": "npm run build",
     "prepare": "husky install"
   },
@@ -51,6 +51,7 @@
     "lint-staged": "^13.2.3",
     "npm-run-all2": "^6.0.6",
     "tslib": "^2.6.0",
+    "tsm": "^2.3.0",
     "typescript": "^5.1.6",
     "uvu": "^0.5.6"
   },

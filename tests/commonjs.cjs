@@ -1,5 +1,5 @@
 // Modules
-const { isCSON } = require('../dist/is-cson.cjs');
+const { isCSON } = require('../src/is-cson');
 
 // Dependencies
 const { test } = require('uvu');

@@ -1,5 +1,5 @@
 // Modules
-import { isCSON } from '../dist/is-cson.mjs';
+import { isCSON } from '../src/is-cson';
 
 // Dependencies
 import { test } from 'uvu';
