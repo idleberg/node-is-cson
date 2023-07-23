@@ -1,12 +1,14 @@
 import { parse as parseCSON } from 'cson-parser';
-import type { IsCson } from '../types';
+
 /**
  * Determines whether a string is valid CSON
  * @param   - string CSON
  * @returns - boolean
  */
 const isCSON = (input: string, userOptions: IsCson.Options = {}): boolean => {
-  if (!isString(input)) return false;
+  if (!isString(input)) {
+		return false
+	}
 
   const options = {
     allowJSON: false,

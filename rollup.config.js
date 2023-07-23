@@ -6,14 +6,6 @@ const plugins = [
   commonjs(),
   json()
 ];
-
-const compilerOptions = {
-  allowSyntheticDefaultImports: true,
-  moduleResolution: 'node',
-  strictNullChecks: true,
-  typeRoots: ['./types', './node_modules/@types']
-};
-
 export default [
   {
     input: 'src/is-cson.ts',
@@ -23,7 +15,7 @@ export default [
     },
     plugins: [
       ...plugins,
-      typescript(compilerOptions)
+      typescript()
     ]
   },
   {
@@ -35,7 +27,6 @@ export default [
     plugins: [
       ...plugins,
       typescript({
-        ...compilerOptions,
         module: 'ES2020',
         moduleResolution: 'node'
       })
