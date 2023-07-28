@@ -3,7 +3,7 @@
 > Determines whether a string is valid CSON
 
 [![License](https://img.shields.io/github/license/idleberg/node-is-cson?color=blue&style=for-the-badge)](https://github.com/idleberg/node-is-cson/blob/main/LICENSE)
-[![npm](https://img.shields.io/npm/v/is-cson?style=for-the-badge)](https://www.npmjs.org/package/is-cson)
+[![Version](https://img.shields.io/npm/v/is-cson?style=for-the-badge)](https://www.npmjs.org/package/is-cson)
 [![Build](https://img.shields.io/github/actions/workflow/status/idleberg/node-is-cson/default.yml?style=for-the-badge)](https://github.com/idleberg/node-is-cson/actions)
 
 ## Installation
