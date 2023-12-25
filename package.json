@@ -4,8 +4,8 @@
   "description": "Determines whether a string is valid CSON",
   "scripts": {
     "build": "npm-run-all --parallel build:*",
-    "build:cjs": "esbuild src/is-cson.ts --platform=node --outfile=dist/is-cson.cjs --format=cjs",
-    "build:esm": "esbuild src/is-cson.ts --platform=node --outfile=dist/is-cson.mjs --format=esm",
+    "build:cjs": "tsup src/is-cson.ts --platform=node --format=cjs --dts --clean",
+    "build:esm": "tsup src/is-cson.ts --platform=node --format=esm --dts --clean",
     "dev": "npm run start",
     "fix": "eslint --fix ./src",
     "lint:json": "eslint ./*.json --ignore-path .gitignore",
@@ -18,16 +18,18 @@
   },
   "type": "module",
   "exports": {
-    "import": "./dist/is-cson.mjs",
-    "require": "./dist/is-cson.cjs"
+    "import": "./lib/is-cson.js",
+    "require": "./lib/is-cson.cjs"
   },
-  "typings": "types/",
+  "typings": "lib/is-cson.d.ts",
   "files": [
-    "dist/",
-    "types/",
+    "lib/",
     "LICENSE",
     "README.md"
   ],
+  "engines": {
+    "node": ">=18"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/idleberg/node-is-cson.git"
@@ -42,17 +44,17 @@
   },
   "devDependencies": {
     "@types/node": "^18.11.17",
-    "@typescript-eslint/eslint-plugin": "^6.1.0",
-    "@typescript-eslint/parser": "^6.1.0",
-    "esbuild": "^0.18.16",
-    "eslint": "^8.45.0",
+    "@typescript-eslint/eslint-plugin": "^6.16.0",
+    "@typescript-eslint/parser": "^6.16.0",
+    "eslint": "^8.56.0",
     "eslint-plugin-json": "^3.1.0",
     "husky": "^8.0.3",
-    "lint-staged": "^13.2.3",
-    "npm-run-all2": "^6.0.6",
-    "tslib": "^2.6.0",
+    "lint-staged": "^15.2.0",
+    "npm-run-all2": "^6.1.1",
+    "tslib": "^2.6.2",
     "tsm": "^2.3.0",
-    "typescript": "^5.1.6",
+    "tsup": "^8.0.1",
+    "typescript": "^5.3.3",
     "uvu": "^0.5.6"
   },
   "lint-staged": {

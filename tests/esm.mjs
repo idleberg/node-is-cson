@@ -1,15 +1,12 @@
-// Modules
 import { isCSON } from '../src/is-cson';
-
-// Dependencies
+import { join } from 'node:path';
+import { readFile } from 'node:fs/promises';
 import { test } from 'uvu';
 import * as assert from 'uvu/assert';
-import { promises as fs } from 'node:fs';
-import path from 'node:path';
 
 // Tests
 test('Valid CSON', async t => {
-  const csonFile = (await fs.readFile(path.join(process.cwd(), 'tests/fixtures/valid.cson'))).toString();
+  const csonFile = (await readFile(join(process.cwd(), 'tests/fixtures/valid.cson'))).toString();
 
   const expected = true;
   const actual = isCSON(csonFile);
@@ -18,7 +15,7 @@ test('Valid CSON', async t => {
 });
 
 test('Invalid CSON', async t => {
-  const csonFile = (await fs.readFile(path.join(process.cwd(), 'tests/fixtures/invalid.cson'))).toString();
+  const csonFile = (await readFile(join(process.cwd(), 'tests/fixtures/invalid.cson'))).toString();
 
   const expected = true;
   const actual = isCSON(csonFile);
@@ -34,7 +31,7 @@ test('Null', async t => {
 });
 
 test('Invalid JSON (allowJSON)', async t => {
-  const csonFile = (await fs.readFile(path.join(process.cwd(), 'tests/fixtures/valid.json'))).toString();
+  const csonFile = (await readFile(join(process.cwd(), 'tests/fixtures/valid.json'))).toString();
 
   const expected = true;
   const actual = isCSON(csonFile, {
@@ -45,7 +42,7 @@ test('Invalid JSON (allowJSON)', async t => {
 });
 
 test('Invalid JSON', async t => {
-  const csonFile = (await fs.readFile(path.join(process.cwd(), 'tests/fixtures/valid.json'))).toString();
+  const csonFile = (await readFile(join(process.cwd(), 'tests/fixtures/valid.json'))).toString();
 
   const expected = true;
   const actual = isCSON(csonFile,);
@@ -54,7 +51,7 @@ test('Invalid JSON', async t => {
 });
 
 test('Valid JSON (allowJSON)', async t => {
-  const csonFile = (await fs.readFile(path.join(process.cwd(), 'tests/fixtures/valid.json'))).toString();
+  const csonFile = (await readFile(join(process.cwd(), 'tests/fixtures/valid.json'))).toString();
 
   const expected = true;
   const actual = isCSON(csonFile, {
@@ -65,7 +62,7 @@ test('Valid JSON (allowJSON)', async t => {
 });
 
 test('Valid JSON', async t => {
-  const csonFile = (await fs.readFile(path.join(process.cwd(), 'tests/fixtures/valid.json'))).toString();
+  const csonFile = (await readFile(join(process.cwd(), 'tests/fixtures/valid.json'))).toString();
 
   const expected = true;
   const actual = isCSON(csonFile);
