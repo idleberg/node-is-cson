@@ -4,8 +4,8 @@
   "description": "Determines whether a string is valid CSON",
   "scripts": {
     "build": "npm-run-all --parallel build:*",
-    "build:cjs": "tsup src/is-cson.ts --platform=node --format=cjs --dts --clean",
-    "build:esm": "tsup src/is-cson.ts --platform=node --format=esm --dts --clean",
+    "build:cjs": "tsup --config tsup.config.ts --format=cjs",
+    "build:esm": "tsup --config tsup.config.ts --format=esm",
     "dev": "npm run start",
     "fix": "eslint --fix ./src",
     "lint:json": "eslint ./*.json --ignore-path .gitignore",
@@ -18,12 +18,12 @@
   },
   "type": "module",
   "exports": {
-    "import": "./lib/is-cson.js",
-    "require": "./lib/is-cson.cjs"
+    "import": "./dist/is-cson.js",
+    "require": "./dist/is-cson.cjs"
   },
-  "typings": "lib/is-cson.d.ts",
+  "typings": "dist/is-cson.d.ts",
   "files": [
-    "lib/",
+    "dist/",
     "LICENSE",
     "README.md"
   ],
